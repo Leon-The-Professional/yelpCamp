@@ -12,13 +12,15 @@
     <h1>All Campgrounds</h1>
     <ul>
         <% for(let camp of campgrounds) {%>
-            <li><a href="<%=camp._id%>">
+            <li><a href="/campgrounds/<%=camp._id%>">
                     <%=`${camp.title} in ${camp.location}` %>
                 </a>
 
             </li>
             <% } %>
     </ul>
+
+    <a href="/">Home</a>
 </body>
 
 </html>
