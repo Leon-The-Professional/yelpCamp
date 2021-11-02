@@ -14,8 +14,8 @@
     <%- include('../partials/navbar') %>
 
         <main class="container mt-5">
-
-            <%- body %>
+            <%- include('../partials/flash') %>
+                <%- body %>
         </main>
         <%- include('../partials/footer') %>
 
@@ -24,25 +24,8 @@
                 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
                 crossorigin="anonymous">
                 </script>
-            <script>
-                (function () {
-                    'use strict'
 
-                    const forms = document.querySelectorAll('.validated-form')
-
-                    Array.from(forms)
-                        .forEach(function (form) {
-                            form.addEventListener('submit', function (event) {
-                                if (!form.checkValidity()) {
-                                    event.preventDefault()
-                                    event.stopPropagation()
-                                }
-
-                                form.classList.add('was-validated')
-                            }, false)
-                        })
-                })()
-            </script>
+            <script src="/javascript/validateForms.js"></script>
 </body>
 
 </html>
